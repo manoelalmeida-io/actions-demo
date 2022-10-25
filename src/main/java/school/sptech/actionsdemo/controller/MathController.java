@@ -9,6 +9,7 @@ public class MathController {
 
   @GetMapping
   public Integer sum(@RequestParam Integer a, @RequestParam Integer b) {
+    // Adding conflict comment
     return a + b;
   }
 }
