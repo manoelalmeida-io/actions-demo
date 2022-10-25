@@ -1,13 +1,17 @@
-name: Deploy / Staging
+name: Deploy
 
 on:
   workflow_call:
+    inputs:
+      ENVIRONMENT:
+        required: true
+        type: string
 
 jobs:
   deployment:
     runs-on: ubuntu-latest
     environment:
-      name: staging
+      name: ${{ inputs.ENVIRONMENT }}
     steps:
       - name: Step 1
         run: sleep 30s
