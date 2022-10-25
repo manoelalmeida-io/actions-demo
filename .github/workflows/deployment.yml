@@ -1,0 +1,13 @@
+name: Deployment
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  call-deployment-review:
+    uses: ./.github/workflows/deploy-review.yml
+  call-deployment-staging:
+    uses: ./.github/workflows/deploy-staging.yml
+  call-deployment-production:
+    uses: ./.github/workflows/deploy-production.yml
