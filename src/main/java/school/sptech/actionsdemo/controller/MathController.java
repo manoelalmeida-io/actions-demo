@@ -9,7 +9,6 @@ public class MathController {
 
   @GetMapping
   public Integer sum(@RequestParam Integer a, @RequestParam Integer b) {
-    // Returns the sum of a and b
     return a + b;
   }
 }
